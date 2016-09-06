@@ -16,12 +16,14 @@ for (let i = 0; i < length; i++) {
     console.log(trib(i));
 }
 
-console.assert(
-    trib(10) === 81,
-    '10番目のトリボナッチ数列を帰す'
-);
+//test
+const assert = require('assert');
 
-console.assert(
-    trib(1000) === 8.155077059490629e+263,
-    '1000番目のトリボナッチ数列を帰す'
-);
+var got  = trib(10);
+var want = 81;
+assert.equal(got, want, `want ${want}, got ${got}`);
+
+got  = trib(1000);
+want = 8.155077059490629e+263;
+assert.equal(got, want, `want ${want}, got ${got}`);
+console.log("全てのテストを通過しました");
