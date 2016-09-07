@@ -11,6 +11,6 @@ function trib(n) {
     return value;
 }
 const length = 40;
-for (let i = 1; i <= length; i++) {
+for (let i = 0; i < length; i++) {
     console.log(trib(i));
 }
