@@ -1,7 +1,7 @@
 'use strict';
 const memo = new Map();
+memo.set(0, 0);
 memo.set(1, 1);
-memo.set(2, 1);
 function trib(n) {
     if (memo.has(n)) {
         return memo.get(n);
@@ -11,6 +11,6 @@ function trib(n) {
     return value;
 }
 const length = 40;
-for (let i = 1; i <= length; i++) {
+for (let i = 0; i <= length; i++) {
     console.log(trib(i));
 }
