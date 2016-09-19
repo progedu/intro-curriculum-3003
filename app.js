@@ -8,7 +8,7 @@
 		if(memo.has(n)) {
 			return memo.get(n);
 		}
-		const value = tfib(n - 1) + tfib(n - 2) + tfib(n - 3);
+		const value = trib(n - 1) + trib(n - 2) + trib(n - 3);
 		memo.set(n, value);
 		return value;
 	}
