@@ -2,6 +2,7 @@
 const memo = new Map();
 memo.set(0, 0);
 memo.set(1, 0);
+//追加
 memo.set(2, 1);
 function trib(n) {
     if (memo.has(n)) {
