@@ -20,5 +20,15 @@ function trib(n) {
 }
 const length = 40;
 for (let i = 0; i <= length; i++) {
-    console.log(trib(i));
+    // console.log(trib(i));
 }
+
+
+// assertによるテスト
+// https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0#%E3%83%88%E3%83%AA%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0
+console.assert(trib(0) === 0);
+console.assert(trib(1) === 0);
+console.assert(trib(2) === 1);
+console.assert(trib(10) === 81);
+console.assert(trib(20) === 35890);
+
