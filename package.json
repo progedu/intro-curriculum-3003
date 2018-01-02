@@ -1,0 +1,19 @@
+{
+  "name": "intro-curriculum-3003",
+  "description": "入門コースの3章3節の練習 トリボナッチ数列",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mktoho12/intro-curriculum-3003"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d lib",
+    "exec": "babel-node lib/app.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
