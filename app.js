@@ -18,7 +18,7 @@ function trib(n) {
     memo.set(n, value); // 計算結果を連想配列に保存する
     return value; // 計算結果を返す
 }
-const length = 40; // トリボナッチ数を求める回数
+const length = process.argv[2] || 40; // トリボナッチ数を求める回数
 // 0 番目から length 番目までのトリボナッチ数を全て求める
 for (let i = 0; i <= length; i++) {
     console.log(trib(i));
