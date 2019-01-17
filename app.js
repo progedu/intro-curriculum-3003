@@ -10,7 +10,11 @@ function trib(n) {
     memo.set(n, value);
     return value;
 }
+let list = "出力例: ";
 const length = 40;
 for (let i = 0; i <= length; i++) {
-    console.log(trib(i));
+    list = list + trib(i) + ", "; // console.log(trib(i));
+    
 }
+const result = list.slice(0, -2);
+console.log(result);
