@@ -4,6 +4,7 @@ memo.set(0,0);
 memo.set(1,0)
 memo.set(2,1)
 
+test
 function fib(n) {
     if (memo.has(n)) {
         return memo.get(n);
