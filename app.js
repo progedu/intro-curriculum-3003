@@ -1,5 +1,5 @@
 'use strict';
-const memo = new Map;
+const memo = new Map();
 memo.set(0, 0);
 memo.set(1, 0);
 memo.set(2, 1);
