@@ -1,17 +1,20 @@
 'use strict';
-const memo = new Map();
-memo.set(0, 0);
-memo.set(1, 0);
-memo.set(2, 1);
-function trib(n) {
-    if (memo.has(n)) {
-        return memo.get(n);
-    }
-    const value = trib(n - 1) + trib(n - 2) + trib(n - 3);
-    memo.set(n, value);
-    return value;
+
+var Trib = function () {
+  this.memo = new Map();
+  this.memo.set(0, 0);
+  this.memo.set(1, 0);
+  this.memo.set(2, 1);
 }
-const length = 100;
-for (let i = 0; i <= length; i++) {
-    console.log(trib(i));
+
+Trib.prototype.calc = function (n) {
+  if (this.memo.has(n)) {
+    return n;
+  }
+  const value = this.calc(n - 3) + this.calc(n - 2) + this.calc(n - 1);
+  this.memo.set(n, value);
+  return value;
 }
+
+const t = new Trib();
+console.log(t.calc(100));
