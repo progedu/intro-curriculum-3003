@@ -11,7 +11,9 @@ function tribonacci(n) {
     memo.set(n, value);
     return value;
 }
-const length = 40;
+const err =  console.log('自然数を入力してください');
+const length = process.argv[2] || 0;
 for (let i = 0; i <= length; i++) {
-    console.log(tribonacci(i));
+    console.log(`${i+1}番目 ${tribonacci(i)}`);
 }
+
