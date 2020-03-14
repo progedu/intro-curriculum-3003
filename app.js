@@ -2,15 +2,18 @@
 const memo = new Map();
 memo.set(0, 0);
 memo.set(1, 1);
-function trib(n) {
+memo.set(2, 1);
+function tribonacci(n) {
     if (memo.has(n)) {
         return memo.get(n);
     }
-    const value = trib(n - 1) + trib(n - 2);
+    const value = tribonacci(n - 1) + tribonacci(n - 2) + tribonacci(n - 3);
     memo.set(n, value);
     return value;
 }
-const length = 40;
+const err =  console.log('自然数を入力してください');
+const length = process.argv[2] || 0;
 for (let i = 0; i <= length; i++) {
-    console.log(trib(i));
+    console.log(`${i+1}番目 ${tribonacci(i)}`);
 }
+
