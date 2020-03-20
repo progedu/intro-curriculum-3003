@@ -15,3 +15,7 @@ const length = 40;
 for (let i = 0; i <= length; i++) {
     console.log(trib(i));
 }
+
+const assert = require('assert')
+assert.equal(trib(10),81 , `10のトリボナッチ数は${81}ですが、プログラムでは${trib(10)}でした`)
+console.log('すべてのテストを通過しました')
