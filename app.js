@@ -4,6 +4,7 @@ memo.set(0, 0);
 memo.set(1, 0);
 memo.set(2, 1);
 function trib(n) {
+    if (n <0) return 0;//0以下の引数は除く
     if (memo.has(n)) {
         return memo.get(n);
     }
