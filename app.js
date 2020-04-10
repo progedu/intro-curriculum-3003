@@ -15,7 +15,6 @@ function trib(n) {
 }
 
 const length = Number(process.argv[2] || 10);
-// const num = length;
 [...Array(length).keys()].map((i) => console.log(i + ' = ', trib(i)));
 console.log(
   `\n`,
