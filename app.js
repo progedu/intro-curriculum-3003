@@ -5,6 +5,7 @@ memo.set(1, 0);
 memo.set(2, 1);
 
 function trib(n) {
+    if (n < 0) {return;};
     if (memo.has(n)) {
         return memo.get(n);
     }
