@@ -13,5 +13,7 @@ function trib(n) {
 }
 const length = 40;
 for (let i = 0; i <= length; i++) {
-    console.log(trib(i));
+    console.log( i + '番目;' + trib(i));
 }
+
+console.log('41番目;' + trib(41));
