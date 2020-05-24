@@ -1,16 +1,20 @@
 'use strict';
-const memo = new Map();
-memo.set(0, 0);
-memo.set(1, 1);
-function trib(n) {
-    if (memo.has(n)) {
-        return memo.get(n);
-    }
-    const value = trib(n - 1) + trib(n - 2);
-    memo.set(n, value);
-    return value;
-}
+var tribonacci = new Map();
 const length = 40;
-for (let i = 0; i <= length; i++) {
-    console.log(trib(i));
+//トリボナッチ数列作成
+for (let i=0;i<=length;i++){
+    tribonacci.set(i,tori(i));
+    console.log(tribonacci.get(i));
+}
+
+//トリボナッチ数列作成関数
+function tori(n){
+    if(n===0){
+        return 0;
+    }else if(n===1){
+        return 0;
+    }else if(n===2){
+        return 1;
+    }
+    return tribonacci.get(n-1) + tribonacci.get(n-2) + tribonacci.get(n-3);
 }
