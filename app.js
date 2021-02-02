@@ -1,13 +1,15 @@
 'use strict';
 const memo = new Map();
-memo.set(0, 0);
-memo.set(1, 1);
+memo.set('F0', 0);
+memo.set('F1', 0);
+memo.set('F2', 1);
+
 function trib(n) {
-    if (memo.has(n)) {
-        return memo.get(n);
+    if (memo.has('F' + n)) {
+        return memo.get('F' + n);
     }
-    const value = trib(n - 1) + trib(n - 2);
-    memo.set(n, value);
+    const value = trib(n - 1) + trib(n - 2) + trib(n - 3);
+    memo.set('F' + n, value);
     return value;
 }
 const length = 40;
