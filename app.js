@@ -11,7 +11,8 @@ function trib(n) {
     memo.set(n, value);
     return value;
 }
-const length = 40;
+
+const length = process.argv[2] || 0; // コマンドラインの引数を持ってくる
 for (let i = 0; i <= length; i++) {
     console.log(trib(i));
 }
