@@ -14,4 +14,5 @@ function trib(n) {
 const length = 40;
 for (let i = 0; i <= length; i++) {
     console.log(trib(i));
+    console.log('abc');
 }
