@@ -1,16 +1,23 @@
 'use strict';
-const memo = new Map();
-memo.set(0, 0);
-memo.set(1, 1);
-function trib(n) {
-    if (memo.has(n)) {
-        return memo.get(n);
+
+const culcuMap = new Map() ;
+
+culcuMap.set(0, 0) ;
+
+culcuMap.set(1, 0) ;
+
+culcuMap.set(2, 1) ;
+
+function sumMap(n){
+    if( culcuMap.has(n) ){
+        return culcuMap.get(n) ;
     }
-    const value = trib(n - 1) + trib(n - 2);
-    memo.set(n, value);
-    return value;
-}
-const length = 40;
-for (let i = 0; i <= length; i++) {
-    console.log(trib(i));
-}
+    const value = sumMap(n-1) + sumMap(n-2) + sumMap(n-3) ;
+    culcuMap.set(n , value) ;
+    return culcuMap.get(n) ;
+};
+
+const length = 40
+for(let i = 0; i <= length ; i++ ){
+    console.log( sumMap(i) );
+};
