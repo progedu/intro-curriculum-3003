@@ -1,12 +1,14 @@
 'use strict';
 const memo = new Map();
 memo.set(0, 0);
-memo.set(1, 1);
+memo.set(1, 0);
+memo.set(2, 1);
 function trib(n) {
+    if (n <0) return 0;//0以下の引数は除く
     if (memo.has(n)) {
         return memo.get(n);
     }
-    const value = trib(n - 1) + trib(n - 2);
+    const value = trib(n - 1) + trib(n - 2)+ trib(n - 3);
     memo.set(n, value);
     return value;
 }
